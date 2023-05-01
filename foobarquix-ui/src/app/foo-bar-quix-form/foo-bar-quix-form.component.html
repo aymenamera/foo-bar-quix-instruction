@@ -1,0 +1,16 @@
+<div class="container">
+  <label>Number to convert
+  </label>
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+    </div>
+    <input inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"
+           class="form-control"  placeholder="Input Number" required  [(ngModel)]="input"
+           aria-describedby="inputGroup-sizing-sm">
+  </div>
+  <span *ngIf="input>2147483647 || !input" class="text-danger">
+  please try an Int number between 0 and 2147483647
+</span>
+  <br/>
+  <button (click) = "submitNumber()" type="button" class="btn btn-primary" [disabled]="input>2147483647 || !input">Button</button>
+</div>

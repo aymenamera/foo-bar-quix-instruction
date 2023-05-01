@@ -1,0 +1,17 @@
+<div>
+<div class="container">
+    <h2>Already converted values : </h2>
+</div>
+  <div class="container">
+    <table class="table table-striped">
+      <tbody>
+      <tr  *ngFor="let converted of converteds" >
+        <td>{{converted.numberToConvert}} and the result is {{converted.result}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+<app-foo-bar-quix-form (submitNumberOutput)="convertNumber($event)"></app-foo-bar-quix-form>
+</div>
